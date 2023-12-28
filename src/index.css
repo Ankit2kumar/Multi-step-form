@@ -1,0 +1,25 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Ubuntu-Regular';
+		src: url('/multi-step-form-main/assets/fonts/Ubuntu-Regular.ttf')
+			format('ttf');
+	}
+
+	@font-face {
+		font-family: 'Ubuntu-Medium';
+		src: url('/multi-step-form-main/assets/fonts/Ubuntu-Medium.ttf')
+			format('ttf');
+	}
+
+	@font-face {
+		font-family: 'Ubuntu-Bold', sans-serif;
+
+		src: url('/multi-step-form-main/assets/fonts/Ubuntu-Bold.ttf') format('ttf');
+	}
+}
