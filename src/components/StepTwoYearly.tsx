@@ -18,7 +18,7 @@ export default function StepTwoYearly() {
 				</div>
 				<div className="w-3/5 absolute bottom-3 right-10 top-10 flex flex-col">
 					<h1 className="font-bold text-4xl text-blue-600">Select your plan</h1>
-					<p className=" mt-5 text-slate-400 text-lg">
+					<p className=" mt-2 text-slate-400 text-lg">
 						You have the option of monthly or yearly billing.
 					</p>
 					<div className="flex flex-row mt-10 justify-evenly items-center ">
