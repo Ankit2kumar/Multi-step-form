@@ -2,6 +2,7 @@
 
 import StepOne from './components/StepOne';
 import StepTwo from './components/StepTwo';
+import StepTwoYearly from './components/StepTwoYearly';
 import './index.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 		<>
 			{/* <StepOne /> */}
 			<StepTwo />
+			<StepTwoYearly />
 		</>
 	);
 }

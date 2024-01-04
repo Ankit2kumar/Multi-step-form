@@ -2,7 +2,7 @@
 
 import OverView from './OverView';
 
-export default function StepTwo() {
+export default function StepTwoYearly() {
 	const imgUrl = `bg-[url('../../multi-step-form-main/assets/images/bg-sidebar-desktop.svg')]`;
 
 	return (
@@ -41,10 +41,13 @@ export default function StepTwo() {
 								</svg>
 							</div>
 							<div className="absolute bottom-3 left-2 flex flex-col">
-								<div className="font-semibold text-blue-600 text-lg text-center ml-2">
+								<div className="font-semibold text-blue-600 text-lg text-center">
 									Arcade
 								</div>
-								<div className="text-slate-400 ml-2">$9/mo</div>
+								<div className="text-slate-400 ml-2">$90/mo</div>
+								<div className="font-normal text-blue-600 text-md text-center ml-2">
+									2 months free
+								</div>
 							</div>
 						</div>
 						<div className="flex flex-row relative rounded-md w-36 h-40 border border-indigo-600">
@@ -66,10 +69,13 @@ export default function StepTwo() {
 								</svg>
 							</div>
 							<div className="absolute bottom-3 left-2 flex flex-col">
-								<div className="font-semibold text-blue-600 text-lg text-center ml-2">
+								<div className="font-semibold text-blue-600 text-lg text-center">
 									Advanced
 								</div>
-								<div className="text-slate-400 ml-2">$12/mo</div>
+								<div className="text-slate-400 ml-2">$120/mo</div>
+								<div className="font-normal text-blue-600 text-md text-center ml-2">
+									2 months free
+								</div>
 							</div>
 						</div>
 						<div className="flex flex-row relative rounded-md w-36 h-40 border border-indigo-600">
@@ -94,7 +100,10 @@ export default function StepTwo() {
 								<div className="font-semibold text-blue-600 text-lg ml-2">
 									Pro
 								</div>
-								<div className="text-slate-400 ml-2">$15/mo</div>
+								<div className="text-slate-400 ml-2">$150/mo</div>
+								<div className="font-normal text-blue-600 text-md text-center ml-2">
+									2 months free
+								</div>
 							</div>
 						</div>
 					</div>
