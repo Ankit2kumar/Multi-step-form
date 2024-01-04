@@ -21,10 +21,35 @@ export default function StepThree() {
 					<p className=" mt-2 text-slate-400 text-md">
 						Add-ons help enhance your gaming experience.
 					</p>
-					<div className="flex flex-col items-center justify-evenly">
-						<div className="rounded-md border border-indigo-600"></div>
-						<div className="rounded-md border border-indigo-600">1</div>
-						<div className="rounded-md border border-indigo-600">1</div>
+					<div className="grid grid-col-3 gap-2 w-full h-[400px] justify-evenly">
+						<div className="rounded-md border border-indigo-600 min-w-full">
+							<div className="flex flex-row">
+								<div className="flex items-center justify-center ml-5 ">
+									<input
+										type="checkbox"
+										id="onlineServices"
+										name="Online services"
+										checked
+									/>
+									<label htmlFor="onlineServices"></label>
+								</div>
+								<div className="flex flex-col justify-center">
+									<div className="font-bold text-lg text-blue-600">
+										Online Service
+									</div>
+									<div className="mt-2 text-slate-400 text-lg">
+										Access to multiplayer games
+									</div>
+								</div>
+								<div></div>
+							</div>
+						</div>
+						<div className="rounded-md border border-indigo-600 min-w-full">
+							1
+						</div>
+						<div className="rounded-md border border-indigo-600 min-w-full">
+							1
+						</div>
 					</div>
 
 					<div className="flex flex-row justify-between text-center mt-28">
