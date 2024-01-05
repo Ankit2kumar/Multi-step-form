@@ -1,5 +1,6 @@
 /** @format */
 
+import LastStep from './components/LastStep';
 import StepFour from './components/StepFour';
 import StepFourYearly from './components/StepFourYearly';
 import StepOne from './components/StepOne';
@@ -17,8 +18,9 @@ function App() {
 			{/* <StepThree /> */}
 			{/* <StepThreeYearly /> */}
 			{/* <StepTwoYearly /> */}
-			<StepFour />
-			<StepFourYearly />
+			{/* <StepFour /> */}
+			{/* <StepFourYearly /> */}
+			<LastStep />
 		</>
 	);
 }
