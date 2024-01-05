@@ -1,5 +1,7 @@
 /** @format */
 
+import StepFour from './components/StepFour';
+import StepFourYearly from './components/StepFourYearly';
 import StepOne from './components/StepOne';
 import StepThree from './components/StepThree';
 import StepThreeYearly from './components/StepThreeYearly';
@@ -12,9 +14,11 @@ function App() {
 		<>
 			{/* <StepOne /> */}
 			{/* <StepTwo /> */}
-			<StepThree />
-			<StepThreeYearly />
+			{/* <StepThree /> */}
+			{/* <StepThreeYearly /> */}
 			{/* <StepTwoYearly /> */}
+			<StepFour />
+			<StepFourYearly />
 		</>
 	);
 }
