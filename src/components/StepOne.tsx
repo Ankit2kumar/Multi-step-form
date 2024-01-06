@@ -1,8 +1,27 @@
 /** @format */
+import { useState } from "react";
 import { StepProps } from "../types/stepProps";
 
 export default function StepOne(props: StepProps) {
-  const goForward = props.goForward;
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(formData);
+    props.goForward();
+  };
+
   return (
     <>
       <div className="w-3/5 absolute bottom-3 right-10 top-10 flex flex-col">
@@ -10,7 +29,7 @@ export default function StepOne(props: StepProps) {
         <p className="text-gray mt-5 text-slate-400 text-lg">
           Please provide your name, email address, and phone number
         </p>
-        <div className=" flex flex-col">
+        <form className=" flex flex-col" onSubmit={handleSubmit}>
           <label
             htmlFor="name"
             className="mt-5 font-bold text-blue-600 text-lg"
@@ -24,6 +43,7 @@ export default function StepOne(props: StepProps) {
             required
             placeholder="e.g. Ankit Kumar"
             className="rounded border p-3"
+            onChange={handleChange}
           />
           <label
             htmlFor="Email"
@@ -38,6 +58,7 @@ export default function StepOne(props: StepProps) {
             required
             placeholder="e.g. ankitlucky.kumar99@gmail.com"
             className="rounded border p-3"
+            onChange={handleChange}
           />
           <label
             htmlFor="PhoneNumber"
@@ -52,16 +73,17 @@ export default function StepOne(props: StepProps) {
             required
             placeholder="e.g. 1 234 567 890"
             className="rounded border p-3"
+            onChange={handleChange}
           />
-        </div>
-      </div>
-      <div className="absolute bottom-8 right-16">
-        <button
-          className="font-normal bg-blue-600 text-md text-white p-3 rounded-lg text-center shadow"
-          onClick={goForward}
-        >
-          Next Step
-        </button>
+          <div className="absolute bottom-8 right-16">
+            <button
+              className="font-normal bg-blue-600 text-md text-white p-3 rounded-lg text-center shadow"
+              type="submit"
+            >
+              Next Step
+            </button>
+          </div>
+        </form>
       </div>
     </>
   );
