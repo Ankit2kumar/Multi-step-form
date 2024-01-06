@@ -13,13 +13,13 @@ import './index.css';
 function App() {
 	return (
 		<>
-			{/* <StepOne /> */}
-			{/* <StepTwo /> */}
-			{/* <StepThree /> */}
-			{/* <StepThreeYearly /> */}
-			{/* <StepTwoYearly /> */}
-			{/* <StepFour /> */}
-			{/* <StepFourYearly /> */}
+			<StepOne />
+			<StepTwo />
+			<StepTwoYearly />
+			<StepThree />
+			<StepThreeYearly />
+			<StepFour />
+			<StepFourYearly />
 			<LastStep />
 		</>
 	);

@@ -17,7 +17,7 @@ export default function LastStep() {
 					<OverView num={4} text="Summary" />
 				</div>
 				<div className="w-3/5 absolute  right-10 top-10">
-					<div className=" flex flex-col justify-center relative top-40 items-center mx-auto">
+					<div className=" flex flex-col justify-center relative top-36 items-center mx-auto">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="80"
