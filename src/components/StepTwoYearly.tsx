@@ -1,9 +1,22 @@
 /** @format */
 
+import { MouseEvent, useState } from 'react';
 import OverView from './OverView';
 
 export default function StepTwoYearly() {
+	type ClickHandler = (event: MouseEvent) => void;
+	const [clicked, setClicked] = useState({});
 	const imgUrl = `bg-[url('../../multi-step-form-main/assets/images/bg-sidebar-desktop.svg')]`;
+
+	const handleClick: ClickHandler = (event) => {
+		try {
+			event.preventDefault();
+			setClicked(event.target);
+			console.log(clicked);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<main className="bg-cyan-50 h-screen flex items-center justify-center">
@@ -21,8 +34,11 @@ export default function StepTwoYearly() {
 					<p className=" mt-2 text-slate-400 text-lg">
 						You have the option of monthly or yearly billing.
 					</p>
-					<div className="flex flex-row mt-10 justify-evenly items-center ">
-						<div className="flex flex-row relative rounded-md w-36 h-40 border border-indigo-600">
+					<div className="flex flex-row mt-10  justify-evenly items-center ">
+						<div
+							className="flex flex-row relative hover:cursor-pointer rounded-md w-36 h-40 border border-indigo-600"
+							onClick={handleClick}
+						>
 							<div className="absolute top-5 left-5">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +57,7 @@ export default function StepTwoYearly() {
 								</svg>
 							</div>
 							<div className="absolute bottom-3 left-2 flex flex-col">
-								<div className="font-semibold text-blue-600 text-lg text-center">
+								<div className="font-semibold  text-blue-600 text-lg text-center">
 									Arcade
 								</div>
 								<div className="text-slate-400 ml-2">$90/mo</div>
@@ -50,7 +66,10 @@ export default function StepTwoYearly() {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-row relative rounded-md w-36 h-40 border border-indigo-600">
+						<div
+							className="flex flex-row relative hover:cursor-pointer rounded-md w-36 h-40 border border-indigo-600"
+							onClick={handleClick}
+						>
 							<div className="absolute top-5 left-5">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +88,7 @@ export default function StepTwoYearly() {
 								</svg>
 							</div>
 							<div className="absolute bottom-3 left-2 flex flex-col">
-								<div className="font-semibold text-blue-600 text-lg text-center">
+								<div className="font-semibold  text-blue-600 text-lg text-center">
 									Advanced
 								</div>
 								<div className="text-slate-400 ml-2">$120/mo</div>
@@ -78,7 +97,10 @@ export default function StepTwoYearly() {
 								</div>
 							</div>
 						</div>
-						<div className="flex flex-row relative rounded-md w-36 h-40 border border-indigo-600">
+						<div
+							className="flex flex-row relative hover:cursor-pointer rounded-md w-36 h-40 border border-indigo-600"
+							onClick={handleClick}
+						>
 							<div className="absolute top-5 left-5">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +119,7 @@ export default function StepTwoYearly() {
 								</svg>
 							</div>
 							<div className="absolute bottom-3 left-2 flex flex-col">
-								<div className="font-semibold text-blue-600 text-lg ml-2">
+								<div className="font-semibold  text-blue-600 text-lg ml-2">
 									Pro
 								</div>
 								<div className="text-slate-400 ml-2">$150/mo</div>

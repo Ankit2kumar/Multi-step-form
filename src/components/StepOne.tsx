@@ -42,8 +42,14 @@ export default function StepOne(props: StepProps) {
 						required
 						placeholder="e.g. Ankit Kumar"
 						className="rounded border p-3"
-						onChange={handleChange}
+						onChange={(e) => {
+							setFormData({
+								...formData,
+								name: e.target.value,
+							});
+						}}
 					/>
+
 					<label
 						htmlFor="Email"
 						className="mt-5 font-bold text-blue-600 text-lg"
@@ -57,7 +63,12 @@ export default function StepOne(props: StepProps) {
 						required
 						placeholder="e.g. ankitlucky.kumar99@gmail.com"
 						className="rounded border p-3"
-						onChange={handleChange}
+						onChange={(e) => {
+							setFormData({
+								...formData,
+								email: e.target.value,
+							});
+						}}
 					/>
 					<label
 						htmlFor="PhoneNumber"
@@ -72,8 +83,14 @@ export default function StepOne(props: StepProps) {
 						required
 						placeholder="e.g. 1 234 567 890"
 						className="rounded border p-3"
-						onChange={handleChange}
+						onChange={(e) => {
+							setFormData({
+								...formData,
+								phoneNumber: e.target.value,
+							});
+						}}
 					/>
+
 					<div className="absolute bottom-8 right-16">
 						<button
 							className="font-normal bg-blue-600 text-md text-white p-3 rounded-lg text-center shadow"
